@@ -6,7 +6,11 @@ def solution(new_id):
         if 'a' <= c <= 'z' or '0' <= c <='9' or c == '-' or c =='_' or c == '.':
             new_id_2 += c
     new_id_3 = new_id_2.replace('..','.')
-    new_id_3 = new_id_3.replace('..','.')
+    while True:
+        if len(new_id_3) != len(new_id_3.replace('..','.')):
+            new_id_3 = new_id_3.replace('..','.')
+        else:
+            break
     new_id_4 = list(new_id_3)
     if new_id_4[0]=='.':
         del new_id_4[0]
